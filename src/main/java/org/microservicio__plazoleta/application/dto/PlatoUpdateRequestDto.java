@@ -1,0 +1,12 @@
+package org.microservicio__plazoleta.application.dto;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class PlatoUpdateRequestDto {
+
+    private String descripcionPlato;
+    private Long precioPlato;
+}
