@@ -13,5 +13,6 @@ public interface IPlatoRepository extends JpaRepository<PlatoEntity, Long> {
     Page<PlatoEntity> findAllByIdRestaurante(Long idRestaurante, Pageable pageable);
     Page<PlatoEntity> findAllByIdRestauranteAndCategoriaPlato(Long idRestaurante, String categoria, Pageable pageable);
 
-    Page<PlatoEntity> findByRestauranteIdAndCategoria(Long restauranteId, String categoria, Pageable pageable);
+    // Cambiar el nombre del método para que coincida con el campo en la entidad
+    Page<PlatoEntity> findByIdRestauranteAndCategoriaPlato(Long idRestaurante, String categoria, Pageable pageable);
 }

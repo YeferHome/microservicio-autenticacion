@@ -11,11 +11,11 @@ public interface IRestaurantePersistencePort {
 
      void saveRestaurante(Restaurante restaurante);
      Restaurante findRestauranteById(Long id);
-     List<Plato> findPlatosByCategoria(Long restauranteId, String categoria, int page, int size);
 
      List<Restaurante> findAllRestaurantsOrderedByName(int page, int size);
 
      Long getRestauranteById(Long id);
+
      boolean elEmpleadoPerteneceAlRestaurante(Long restauranteId);
 
 }

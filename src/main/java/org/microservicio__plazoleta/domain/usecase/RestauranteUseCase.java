@@ -39,11 +39,6 @@ public class RestauranteUseCase implements IRestauranteServicePort {
     }
 
 
-    @Override
-    public List<Plato>getPlatosByCategoria(Long restauranteId, String categoria, int page, int size) {
-        return restaurantePersistence.findPlatosByCategoria(restauranteId, categoria, page, size);
-    }
-
 
     private void validarRolUsuario(Long idUsuario, String rolEsperado) {
         if (!rolEsperado.equalsIgnoreCase(usuarioService.obtenerRolUsuario(idUsuario))) {

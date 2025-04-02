@@ -49,7 +49,7 @@ public class BeanConfiguration {
 
     @Bean
     public IRestaurantePersistencePort restaurantePersistencePort(){
-        return new RestauranteJpaAdapter(restauranteRepository, restauranteEntityMapper, platoRepository);
+        return new RestauranteJpaAdapter(restauranteRepository, restauranteEntityMapper);
     }
 
     @Bean

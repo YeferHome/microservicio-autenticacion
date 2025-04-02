@@ -12,5 +12,5 @@ public interface IPlatoServicePort {
 
     Plato updateEstadoPlato(Long idPlato, boolean nuevoEstado, Long idUsuario);
 
-    List<Plato> getPlatosByRestaurante(Long idRestaurante, String categoria, int page, int size);
+    List<Plato> getPlatosByRestaurante(Long restauranteId, String categoria, int page, int size);
 }

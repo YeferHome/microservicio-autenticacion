@@ -44,9 +44,9 @@ public class PedidoUseCase implements IPedidoServicePort {
         if (pedido.getItems() == null || pedido.getItems().isEmpty()) {
             throw new BusinessException("El pedido no tiene platos.");
         }
-        Long restauranteId = pedido.getIdRestaurante();
+        Long idRestaurante = pedido.getIdRestaurante();
         for (PedidoItem item : pedido.getItems()) {
-            if (!restauranteId.equals(item.getIdRestaurante())) {
+            if (!idRestaurante.equals(item.getIdRestaurante())) {
                 throw new BusinessException("Todos los platos deben ser del mismo restaurante.");
             }
             if (item.getCantidad() <= 0) {
@@ -61,8 +61,8 @@ public class PedidoUseCase implements IPedidoServicePort {
         }
     }
 
-    private void verificarEmpleadoEnRestaurante(Long restauranteId) {
-        if (!restaurantePersistence.elEmpleadoPerteneceAlRestaurante(restauranteId)) {
+    private void verificarEmpleadoEnRestaurante(Long idRestaurante) {
+        if (!restaurantePersistence.elEmpleadoPerteneceAlRestaurante(idRestaurante)) {
             throw new BusinessException("El empleado no pertenece a este restaurante.");
         }
     }

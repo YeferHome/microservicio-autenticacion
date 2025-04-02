@@ -11,5 +11,5 @@ public interface IRestauranteServicePort {
     void saveRestaurante(Restaurante restaurante);
     List<Restaurante> getAllRestaurantes(int page, int size);
     Long getRestauranteById(Long id);
-    List<Plato>getPlatosByCategoria(Long restauranteId, String categoria, int page, int size);
+
 }

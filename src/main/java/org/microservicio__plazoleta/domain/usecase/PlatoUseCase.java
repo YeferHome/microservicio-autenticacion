@@ -61,10 +61,10 @@ public class PlatoUseCase implements IPlatoServicePort {
     }
 
     @Override
-    public List<Plato> getPlatosByRestaurante(Long idRestaurante, String categoria, int page, int size) {
+    public List<Plato> getPlatosByRestaurante(Long restauranteId, String categoria, int page, int size) {
         return (categoria != null && !categoria.trim().isEmpty())
-                ? platoPersistence.findByRestauranteAndCategoria(idRestaurante, categoria, page, size)
-                : platoPersistence.findByRestaurante(idRestaurante, page, size);
+                ? platoPersistence.findByRestauranteAndCategoria(restauranteId, categoria, page, size)
+                : platoPersistence.findByRestaurante(restauranteId, page, size);
     }
 
     private void verificarPropietario(Long idUsuario) {
